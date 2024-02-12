@@ -15,7 +15,7 @@ async function authMiddleware(c:any , next:any ) {
 app.use(authMiddleware);
 
 
-app.post('/',authMiddleware, async (c) => {
+app.post('/', async (c) => {
   const body = await c.req.json()
   console.log(body);
   console.log(c.req.header("Authorization"));
